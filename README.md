@@ -375,3 +375,44 @@ Rode o servidor com o comando a seguir, onde global_conf.json.sx1250.AU915 é o 
 #cd ~/Documents/sx1302_hal/packet_forwarder/
 ./lora_pkt_fwd -c global_conf.json.sx1250.AU915
 ```
+## 5 Iniciar como serviço
+
+No seu diretório de construção, há um arquivo de script:
+```
+cd ~/Documents/sx1302_hal/tools/systemd
+```
+Editar o arquivo abaixo: 
+```
+nano lora_pkt_fwd.service
+```
+Verificar o conteúdo WorkingDirectory e ExecStart o seguinte conteúdo ao arquivo:
+```
+[Unit]
+Description=LoRa Packet Forwarder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/Documents/sx1302_hal/packet_forwarder
+ExecStart=/home/pi/Documents/sx1302_hal/packet_forwarder/lora_pkt_fwd -c /home/pi/Documents/sx1302_hal/packet_forwarder/global_conf.json.sx1250.AU915
+Restart=always
+RestartSec=30
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=lora_pkt_fwd
+
+[Install]
+WantedBy=multi-user.target
+```
+# Em seguida, copie o arquivo de serviço, registre-o e habilite:
+
+sudo cp lora_pkt_fwd.service /etc/systemd/system
+
+# Habilite o serviço para inicialização automática com
+```
+sudo systemctl daemon-reload
+sudo systemctl enable lora_pkt_fwd.service
+sudo reboot
+```
+
