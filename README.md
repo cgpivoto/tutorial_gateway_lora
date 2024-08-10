@@ -406,9 +406,9 @@ SyslogIdentifier=lora_pkt_fwd
 WantedBy=multi-user.target
 ```
 Em seguida, copie o arquivo de serviço, registre-o e habilite:
-
+```
 sudo cp lora_pkt_fwd.service /etc/systemd/system
-
+```
 Habilite o serviço para inicialização automática com os comandos:
 ```
 sudo systemctl daemon-reload
