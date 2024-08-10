@@ -66,7 +66,7 @@ CoreCell power enable through GPIO18...
 CoreCell ADC reset through GPIO13...
 ```
 
-Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração a seguir. Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos de acordo com a a banda, frequência e canal da sua região, verifique qual seria o compatível com as normas regulatórias vigentes.
+Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração do Passo 4.
 
 ## 3. Configurando o TTS
 
@@ -96,10 +96,19 @@ Preencha os dados de Application Id, name e description.
 Após criar a application, iremos cadastrar os End-Devices para permitir a comunicação dos mesmos com o TTS. Para isso, basta acessar a página da aplicação e clicar no botão `+ Register end device`, para cadastrar o device, tenha em mãos os dados de configuração do mesmo, como: Marca do fornecedor, modelo, classe de operação, região, plano de frequência, e id do chip lora do end device.
 
 ## 4. Iniciar o gateway
+Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos de acordo com a a banda, frequência e canal da sua região, verifique qual seria o compatível com as normas regulatórias vigentes.
 
 Neste tutorial utilizamos um modelo para AU915, que seria o correto para a região, atualize os campos para satisfazer as suas necessidades. Utilize o código EUI no gateway_id obtido no passo 2 e o server_address de cadastro no TTS. 
 
+```
 
+Acessar e criar arquivo no caminho:
+
+```
+cd ~/Documents/sx1302_hal/packet_forwarder/
+nano global_conf.json.sx1250.AU915
+```
+Modificar JSON abaixo com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 ), e colar no novo arquivo.
 ```
 {
     "SX130x_conf": {
@@ -360,17 +369,11 @@ Neste tutorial utilizamos um modelo para AU915, que seria o correto para a regi�
         "log_file": "loragw_hal.log"
     }
 }
-```
 
-Crie esse arquivo no caminho:
 
-```
-cd ~/Documents/sx1302_hal/packet_forwarder/
-```
-
-Rode o servidor com o comando a seguir, onde test_conf é o nome do arquivo criado previamente
+Rode o servidor com o comando a seguir, onde global_conf.json.sx1250.AU915 é o nome do arquivo criado anteriormente
 
 ```
 cd ~/Documents/sx1302_hal/packet_forwarder/
-./lora_pkt_fwd -c test_conf
+./lora_pkt_fwd -c global_conf.json.sx1250.AU915
 ```
