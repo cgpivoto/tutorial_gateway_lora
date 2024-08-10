@@ -100,12 +100,12 @@ Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/D
 
 Neste tutorial utilizamos um modelo para AU915, que seria o correto para a região, atualize os campos para satisfazer as suas necessidades. Utilize o código EUI no gateway_id obtido no passo 2 e o server_address de cadastro no TTS. 
 
-```
-
 Acessar e criar arquivo no caminho:
 
 ```
 cd ~/Documents/sx1302_hal/packet_forwarder/
+```
+```
 nano global_conf.json.sx1250.AU915
 ```
 Modificar JSON abaixo com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 ), e colar no novo arquivo.
