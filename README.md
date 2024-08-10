@@ -18,7 +18,7 @@ Na linha de comando do Raspberry digite:
 sudo raspi-config
 ```
 
-Vá para opção `3. Interface Options`, habilite a SPI e I2C, para habilitar a Porta serial, na primeira opção perguntará se deseja ativar para o console, escolha No e Yes para a segunda opção.
+Vá para opção `3. Interface Options`, habilite a SPI e I2C, para habilitar a Porta serial, na primeira opção perguntará se deseja ativar para o console, escolha No e Yes para a segunda opção. Reboot YES.
 
 ## 2. Instalação do sistema para o Gateway
 
