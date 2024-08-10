@@ -385,7 +385,7 @@ Editar o arquivo abaixo:
 ```
 nano lora_pkt_fwd.service
 ```
-Verificar o conteúdo WorkingDirectory e ExecStart o seguinte conteúdo ao arquivo:
+Verificar o caminho para os arquivos no WorkingDirectory e ExecStart, como abaixo:
 ```
 [Unit]
 Description=LoRa Packet Forwarder
@@ -405,11 +405,11 @@ SyslogIdentifier=lora_pkt_fwd
 [Install]
 WantedBy=multi-user.target
 ```
-# Em seguida, copie o arquivo de serviço, registre-o e habilite:
+Em seguida, copie o arquivo de serviço, registre-o e habilite:
 
 sudo cp lora_pkt_fwd.service /etc/systemd/system
 
-# Habilite o serviço para inicialização automática com
+Habilite o serviço para inicialização automática com os comandos:
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable lora_pkt_fwd.service
