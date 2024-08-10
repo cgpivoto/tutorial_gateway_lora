@@ -2,13 +2,13 @@
 
 Nesse tutorial apresentarei a instalação passo a passo de um gateway LoraWan SX1302 do fabricante Waveshare com um RaspberryPi 3.
 
- [LoraWan SX1302 Wiki]([https://](https://www.waveshare.com/wiki/SX1302_LoRaWAN_Gateway_HAT))
+ [LoraWan SX1302 Wiki](https://www.waveshare.com/wiki/SX1302_LoRaWAN_Gateway_HAT)
 
 ## 1. Instalação do SO do Raspberry
 
 Utilize o Raspberry Pi Imager para instalar o Raspibian OS  (Legacy, 64-bit) Lite no seu cartão SD.
 
-[Raspberry Pi Image Download]([https://](https://www.raspberrypi.com/software/))
+[Raspberry Pi Image Download](https://www.raspberrypi.com/software/)
 
 Configure o login e senha e habilite conexão SSH e com o wi-fi se desejar.
 
@@ -74,11 +74,11 @@ Com o código EUI em mãos podemos criar a conta e configurar no gateway no TTS.
 
 Crie uma conta no site:
 
-[The Things Network]([https://](https://id.thethingsnetwork.org/))
+[The Things Network](https://id.thethingsnetwork.org/)
 
 Após realizar o login, iremos iniciar a configuração, para isso acesse o console:
 
-[Console TTN]([https://](https://console.cloud.thethings.network/))
+[Console TTN](https://console.cloud.thethings.network/)
 
 
 Siga o passo a passo para configurar o gateway, escolha o país onde será instalado e a região.
