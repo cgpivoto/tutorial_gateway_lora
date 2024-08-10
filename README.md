@@ -369,10 +369,8 @@ Modificar JSON abaixo com os dados de EUI (encontrado Passo 2) e "server_address
         "log_file": "loragw_hal.log"
     }
 }
-
-
+```
 Rode o servidor com o comando a seguir, onde global_conf.json.sx1250.AU915 é o nome do arquivo criado anteriormente
-
 ```
 cd ~/Documents/sx1302_hal/packet_forwarder/
 ./lora_pkt_fwd -c global_conf.json.sx1250.AU915
