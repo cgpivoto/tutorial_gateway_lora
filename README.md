@@ -52,7 +52,7 @@ AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 Caso seja diferente os pinos modificar o arquivo reset_lgw.sh e salvar.
 
-## Obter o EUI do Gateway
+### Obter o EUI do Gateway
 Rode os seguintes comandos: 
 ```
 cd ~/Documents/sx1302_hal/util_chip_id/
