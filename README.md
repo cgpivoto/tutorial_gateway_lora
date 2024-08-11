@@ -37,7 +37,7 @@ cp tools/reset_lgw.sh util_chip_id/
 cp tools/reset_lgw.sh packet_forwarder/
 ```
 
-#Verificar se os pinos do shield deste fabricante são os mesmo que estão na configuração do arquivo reset_lgw.sh. 
+#Verificar no site do fabricante se os pinos do shield são os mesmo que estão na configuração do arquivo reset_lgw.sh. 
 ```
 cd ~/Documents/sx1302_hal/packet_forwarder/
 nano reset_lgw.sh
@@ -50,6 +50,8 @@ SX1302_POWER_EN_PIN=18  # SX1302 power enable
 SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
+Caso diferente modificar e salvar.
+
 # Obter o EUI do Gateway
 Rode os seguintes comandos: 
 ```
