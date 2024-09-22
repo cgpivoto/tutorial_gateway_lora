@@ -126,6 +126,7 @@ nano global_conf.json.sx1250.AU915
 ```
 Utilize o código EUI no gateway_id obtido no passo 2 e o server_address de cadastro no TTS. 
 Modificar JSON abaixo com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 ), e colar no novo arquivo.
+# JSON: global_conf.json.sx1250.AU915
 ```
 {
     "SX130x_conf": {
