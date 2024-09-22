@@ -128,17 +128,7 @@ JSON abaixo copiar, colar
 Modificar com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 )
 e salvar.
 Para a nossa regiao o TTN sugere a sequinte Clauster:
-```
- "servers": [
-            {
-                "gateway_ID": "XXXXXXXXXXXXXXXX",
-                "server_address": "nam1.cloud.thethings.network",
-                "serv_port_up": 1700,
-                "serv_port_down": 1700,
-                "serv_enabled": true
-            }
-        ]
-```
+"gateway_ID": "0xXXXXXXXXXXXXXXXX" substituir "XXXXXXXXXXXXXXXX" pelo EUI, "server_address": "nam1.cloud.thethings.network", "serv_port_up": 1700,"serv_port_down": 1700.
 
 ### JSON: global_conf.json.sx1250.AU915
 ```
@@ -352,7 +342,7 @@ Para a nossa regiao o TTN sugere a sequinte Clauster:
         } /* Freq : 868.8 MHz*/
     },
     "gateway_conf": {
-        "gateway_ID": "XXXXXXXXXXXXXXXX",
+        "gateway_ID": "0xXXXXXXXXXXXXXXXX",
         /* change with default server address/ports */
         "server_address": "nam1.cloud.thethings.network",
         "serv_port_up": 1700,
