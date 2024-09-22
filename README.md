@@ -11,7 +11,7 @@ Utilize o Raspberry Pi Imager para instalar o Raspberry pi OS  (Legacy, 64-bit) 
 [Raspberry Pi Image Download](https://www.raspberrypi.com/software/)
 
 Configure o login e senha e habilite conexão SSH e com o wi-fi se desejar.
- e instale as bibliotecas com os seguintes comandos:
+
 Abra o terminal do Raspberry Pi e digite a sequinte linha de comando:
 
 ```
