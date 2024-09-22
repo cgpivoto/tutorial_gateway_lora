@@ -114,7 +114,7 @@ Após criar a application, iremos cadastrar os End-Devices para permitir a comun
 ## 4. Iniciar o gateway
 Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos de acordo com a a banda, frequência e canal da sua região, verifique qual seria o compatível com as normas regulatórias vigentes.
 
-No entanto, o plano AU915-928 não esta disponivel entre as opções existentes no diretorio interno do gateway. Para isso , foi adaptado entre os arquivos existentes o codigo para "global_conf.json.sx1250.AU915"(Vide codigo completo abaixo). Utilize o código EUI no gateway_id obtido no passo 2 e o server_address de cadastro no TTS. 
+No entanto, o plano AU915-928 não esta disponivel entre as opções existentes no diretorio interno do gateway. Para isso , foi adaptado entre os arquivos existentes o codigo para a região AU915, vide codigo completo abaixo, abrir um arquivo no bloco de notas copiar,colar os codigos e salvar com o nome "global_conf.json.sx1250.AU915". 
 
 Acessar e criar arquivo no caminho:
 
@@ -124,6 +124,7 @@ cd ~/Documents/sx1302_hal/packet_forwarder/
 ```
 nano global_conf.json.sx1250.AU915
 ```
+Utilize o código EUI no gateway_id obtido no passo 2 e o server_address de cadastro no TTS. 
 Modificar JSON abaixo com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 ), e colar no novo arquivo.
 ```
 {
