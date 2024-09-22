@@ -127,6 +127,18 @@ nano global_conf.json.sx1250.AU915
 JSON abaixo copiar, colar 
 Modificar com os dados de EUI (encontrado Passo 2) e "server_address"(encontrado Passo 3 )
 e salvar.
+Para a nossa regiao o TTN sugere a sequinte Clauster:
+```
+ "servers": [
+            {
+                "gateway_ID": "XXXXXXXXXXXXXXXX",
+                "server_address": "nam1.cloud.thethings.network",
+                "serv_port_up": 1700,
+                "serv_port_down": 1700,
+                "serv_enabled": true
+            }
+        ]
+```
 
 ### JSON: global_conf.json.sx1250.AU915
 ```
