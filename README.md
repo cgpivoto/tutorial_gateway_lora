@@ -6,17 +6,18 @@ Nesse tutorial apresentarei a instalação passo a passo de um gateway LoraWan S
 
 ## 1. Instalação do SO do Raspberry
 
-Utilize o Raspberry Pi Imager para instalar o Raspberry pi OS  (Legacy, 64-bit) Lite no seu cartão SD.
+Utilize o Raspberry Pi Imager para instalar o Raspberry pi OS  (Legacy, 64-bit) Lite no seu cartão microSD.
 
 [Raspberry Pi Image Download](https://www.raspberrypi.com/software/)
 
-Configure o login e senha e habilite conexão SSH e com o wi-fi se desejar.
+Ligar o Raspberry PI com o cartão microSD conectado. 
 
 Abra o terminal do Raspberry Pi e digite a sequinte linha de comando:
 
 ```
 sudo raspi-config
 ```
+Configure o login e senha e habilite conexão SSH e com o wi-fi se desejar.
 
 Vá para opção `3. Interface Options`, habilite a SPI e I2C, para habilitar a Porta serial, na primeira opção perguntará se deseja ativar para o console, escolha No e Yes para a segunda opção. Reboot YES.
 
