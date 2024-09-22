@@ -114,7 +114,7 @@ Após criar a application, iremos cadastrar os End-Devices para permitir a comun
 ## 4. Iniciar o gateway
 Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos de acordo com a a banda, frequência e canal da sua região, verifique qual seria o compatível com as normas regulatórias vigentes.
 
-No entanto, o plano AU915-928 não esta disponivel entre as opções existentes no diretorio interno do gateway. Para isso , foi adaptado entre os arquivos existentes o codigo para a região AU915, vide codigo completo abaixo, abrir um arquivo no bloco de notas copiar,colar os codigos e salvar com o nome "global_conf.json.sx1250.AU915". 
+No entanto, o plano AU915-928 não esta disponivel entre as opções existentes. Para isso , foi adaptado entre os arquivos existentes o codigo para a região AU915, vide codigo completo abaixo, abrir um arquivo no bloco de notas copiar,colar os codigos e salvar com o nome "global_conf.json.sx1250.AU915". 
 
 Acessar e criar arquivo no caminho:
 
