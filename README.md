@@ -10,7 +10,7 @@ Utilize o Raspberry Pi Imager para instalar o Raspberry pi OS  (Legacy, 64-bit) 
 
 [Raspberry Pi Image Download](https://www.raspberrypi.com/software/)
 
-Ligar o Raspberry PI com o cartão microSD conectado. 
+Ligar o Raspberry Pi com o cartão microSD conectado. 
 
 Abra o terminal do Raspberry Pi e digite a sequinte linha de comando:
 
