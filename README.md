@@ -81,7 +81,7 @@ CoreCell power enable through GPIO18...
 CoreCell ADC reset through GPIO13...
 ```
 
-Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração do Passo 4.
+Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração do Passo 5.
 
 ## 4. Configuração no The Things Network (TTN)
 
