@@ -41,6 +41,7 @@ cp tools/reset_lgw.sh packet_forwarder/
 cd ~/Documents/sx1302_hal/packet_forwarder/
 nano reset_lgw.sh
 ```
+Exemplo de configuração padrão:
 ```
 # GPIO mapping has to be adapted with HW
 #
@@ -51,8 +52,8 @@ AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 Caso seja diferente os pinos modificar o arquivo reset_lgw.sh e salvar.
 
-### Obter o EUI do Gateway
-Rode os seguintes comandos: 
+## 3. Obter o EUI do Gateway
+Para registrar o gateway no TTN, você precisa do EUI. Execute os seguintes comandos: 
 ```
 cd ~/Documents/sx1302_hal/util_chip_id/
 ./chip_id 
@@ -82,7 +83,7 @@ CoreCell ADC reset through GPIO13...
 
 Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração do Passo 4.
 
-## 3. Configurando o TTS
+## 4. Configuração no The Things Network (TTN)
 
 Com o código EUI em mãos podemos criar a conta e configurar no gateway no TTS.
 
@@ -109,10 +110,9 @@ Preencha os dados de Application Id, name e description.
 
 Após criar a application, iremos cadastrar os End-Devices para permitir a comunicação dos mesmos com o TTS. Para isso, basta acessar a página da aplicação e clicar no botão `+ Register end device`, para cadastrar o device, tenha em mãos os dados de configuração do mesmo, como: Marca do fornecedor, modelo, classe de operação, região, plano de frequência, e id do chip lora do end device.
 
-## 4. Iniciar o gateway
-Para rodar o gateway precisamos do arquivo de configuração, no caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos de acordo com a a banda, frequência e canal da sua região, verifique qual seria o compatível com as normas regulatórias vigentes.
-
-No entanto, o plano AU915-928 não esta disponivel entre as opções existentes. Para isso , foi adaptado entre os arquivos existentes o codigo para a região AU915, vide codigo completo abaixo, abrir um arquivo no bloco de notas copiar,colar os codigos e salvar com o nome "global_conf.json.sx1250.AU915". 
+## 5. Configuração do Arquivo para o Packet Forwarder
+Para iniciar o gateway,você precisa de um arquivo de configuração adequado para a sua região. No caso do Brasil, utilize a frequência AU915-928.
+No caminho `cd ~/Documents/sx1302_hal/packet_forwarder/` encontram-se vários modelos. No entanto, o plano AU915-928 não esta disponivel entre as opções existentes. Para isso , foi adaptado entre os arquivos existentes o codigo para a região AU915, vide codigo completo abaixo, abrir um arquivo no bloco de notas copiar,colar os codigos e salvar com o nome "global_conf.json.sx1250.AU915". 
 
 Acessar e criar arquivo no caminho:
 
@@ -395,14 +395,11 @@ Rode o servidor com o comando a seguir, onde global_conf.json.sx1250.AU915 é o 
 #cd ~/Documents/sx1302_hal/packet_forwarder/
 ./lora_pkt_fwd -c global_conf.json.sx1250.AU915
 ```
-## 5 Iniciar como serviço
+## 6 Configuração como Serviço (Opcional)
 
-No seu diretório de construção, há um arquivo de script:
+Para iniciar o packet forwarder automaticamente como um serviço no Raspberry Pi, edite o arquivo de serviço:
 ```
 cd ~/Documents/sx1302_hal/tools/systemd
-```
-Editar o arquivo abaixo: 
-```
 nano lora_pkt_fwd.service
 ```
 Verificar o caminho para os arquivos no WorkingDirectory e ExecStart, como abaixo:
