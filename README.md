@@ -81,17 +81,15 @@ CoreCell power enable through GPIO18...
 CoreCell ADC reset through GPIO13...
 ```
 
-Onde `0xXXXXXXXXXXXXXXXX` é o código EUI é o gateway_id que será utilizado na configuração do Passo 5.
+Onde `0xXXXXXXXXXXXXXXXX` é o código EUI que será utilizado no TTN e configuração do Gateway.
 
 ## 4. Configuração no The Things Network (TTN)
-
-Com o código EUI em mãos podemos criar a conta e configurar no gateway no TTS.
 
 Crie uma conta no site:
 
 [The Things Network](https://id.thethingsnetwork.org/)
 
-Após realizar o login, iremos iniciar a configuração, para isso acesse o console:
+Após o login, acesse o console:
 
 [Console TTN](https://console.cloud.thethings.network/)
 
