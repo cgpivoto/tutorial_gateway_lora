@@ -1,30 +1,28 @@
-# Tutorial de configuração de um gateway lora no TTS
+# Tutorial de Configuração de um Gateway LoRaWAN SX1302 no The Things Network (TTN)
 
-Nesse tutorial apresentarei a instalação passo a passo de um gateway LoraWan SX1302 do fabricante Waveshare com um RaspberryPi 3.
+Este tutorial orienta a instalação e configuração de um Gateway LoRaWAN SX1302 da Waveshare utilizando um Raspberry Pi 3, conectando-o ao The Things Network (TTN).
 
  [LoraWan SX1302 Wiki](https://www.waveshare.com/wiki/SX1302_LoRaWAN_Gateway_HAT)
 
-## 1. Instalação do SO do Raspberry
+## 1. Instalação do Sistema Operacional no Raspberry Pi
 
-Utilize o Raspberry Pi Imager para instalar o Raspberry pi OS  (Legacy, 64-bit) Lite no seu cartão microSD.
+Baixe e instale o Raspberry Pi Imager para instalar o Raspberry Pi OS (Legacy, 64-bit) Lite no cartão microSD.
 
 [Raspberry Pi Image Download](https://www.raspberrypi.com/software/)
 
-Ligar o Raspberry Pi com o cartão microSD conectado. 
+Conecte o Raspberry Pi à fonte de alimentação com o cartão microSD inserido e ligue-o. 
 
-Abra o terminal do Raspberry Pi e digite a sequinte linha de comando:
+Abra o terminal e execute o seguinte comando para abrir a configuração inicial do Raspberry Pi:
 
 ```
 sudo raspi-config
 ```
-Configure o login e senha e habilite conexão SSH e com o wi-fi se desejar.
-
-Vá para opção `3. Interface Options`, habilite a SPI e I2C, para habilitar a Porta serial, na primeira opção perguntará se deseja ativar para o console, escolha No e Yes para a segunda opção. Reboot YES.
+Defina login, senha, habilite conexão SSH e configure a conexão Wi-Fi, se necessário.
+Vá para opção `3. Interface Options`, e habilite  SPI, I2C e a Porta serial(desative para console e ative para a interface serial). Reboot o sistema.
 
 ## 2. Instalação do sistema para o Gateway
 
-Na linha de comando do Raspberry Pi, digitaremos os seguintes comandos em ordem de acordo com o manual do fabricante para instalação da biblioteca:
-
+Com o Raspberry Pi configurado, execute os seguintes comandos para instalar o pacote necessário e clonar o repositório:
 ```
 sudo apt update
 sudo apt install git
@@ -38,7 +36,7 @@ cp tools/reset_lgw.sh util_chip_id/
 cp tools/reset_lgw.sh packet_forwarder/
 ```
 
-#Verificar no site do fabricante se os pinos do shield são os mesmo que estão na configuração do arquivo reset_lgw.sh. 
+#Verifique se os pinos de controle do reset_lgw.sh estão configurados corretamente conforme o seu hardware. Edite o arquivo se necessário:
 ```
 cd ~/Documents/sx1302_hal/packet_forwarder/
 nano reset_lgw.sh
